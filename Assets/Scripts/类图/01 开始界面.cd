@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pao" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEKAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Effect\Pao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shine" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAIAAEAAAAAAAAAAAAAAAAQAAAAAAAAACAEA=</HashCode>
+      <FileName>Assets\Scripts\Effect\Shine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreatePao" Collapsed="true">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\UI\CreatePao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartGame" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\UI\StartGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShineHide" Collapsed="true">
+    <Position X="1" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAACAAEAAAAAAAAAAAAAAEAAAEAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Effect\ShineHide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

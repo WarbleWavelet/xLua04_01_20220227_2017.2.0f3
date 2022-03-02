@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="大招">
+    <Position X="3.819" Y="1.153" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="Treasour" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAQACAAAAEABAQIAAAAAAAAAAAAAAAAIACAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player\UI\Treasour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fire" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABCACAAAAAAgAAABAAAAYAAAAAEAAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerUI\Fire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ice" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAACACAAAAAAgAAABAgAAQAAAEAEAAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerUI\Ice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButterFly" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABABCACAAAAAAgAAABAAAAQAEAAAEAAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerUI\ButterFly.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunImage" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEBAAAAAEAAAAAAAAAAAAIAAAAAAAAEAAAAEAkA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerUI\GunImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReturnMain" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\UI\ReturnMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gun" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQGAUBAAQgAAQBQIAAgOAAAYINEAJDAQAERICIEQGA=</HashCode>
+      <FileName>Assets\Scripts\Player\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullect" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EiQAAAAgEAAAAACQAAAgAAEAAAGAgABEQAAAgAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Bullect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pao" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEKAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Effect\Pao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shake" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Effect\Shake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shine" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAIAAEAAAAAAAAAAAAAAAAQAAAAAAAAACAEA=</HashCode>
+      <FileName>Assets\Scripts\Effect\Shine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Water" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEACAAAAAABAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Effect\Water.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FishNet" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Item\FishNet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gold" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAgEAAAAgCACgAAAAEBAACAAABAgBAQAAAQAEA=</HashCode>
+      <FileName>Assets\Scripts\Item\Gold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Missile" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIRAAQAAkCBAAAAAABAAAgAAKAAAAgAEBABAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Item\Missile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shell" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAUCBAAAAAAAAAQgAAIAAgAgAEBAAAACAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Item\Shell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qipao" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAECBAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Qipao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fish" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CARAAQACkCBAAChAAAQAAgAAIBAAIgIEBARCgCAABUA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Fish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAQARECBAAABAAhAAAgAAKIAAABAEBARSgCEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Boss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeffendBoss" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAACAAAAAAAAAAQAAAAAAIBAAAAEAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\DeffendBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvisibleBoss" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAACAABAQAAAAAAgAAAAAAAiAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\InvisibleBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
