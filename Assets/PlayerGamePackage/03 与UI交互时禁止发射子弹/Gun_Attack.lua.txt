@@ -1,0 +1,63 @@
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+
+
+ --   private void Attack()
+ --   {
+ --
+ --       if (Input.GetMouseButtonDown(0))
+ --       {
+ --
+ --           bullectAudio.clip = bullectAudios[gunLevel - 1];
+ --           bullectAudio.Play();
+ --
+ --           if (Butterfly)
+ --           {
+ --               Instantiate(Bullects[gunLevel - 1], attackPos.position, attackPos.rotation * Quaternion.Euler(0, 0, 20));
+ --               Instantiate(Bullects[gunLevel - 1], attackPos.position, attackPos.rotation * Quaternion.Euler(0, 0, -20));
+ --           }
+ --
+ --           Instantiate(Bullects[gunLevel - 1], attackPos.position, attackPos.rotation);
+ --
+ --
+ --           if (!canShootForFree)
+ --           {
+ --               GoldChange(-1 - (gunLevel - 1) * 2);
+ --
+ --           }
+ --           attackCD = 0;
+ --           attack = false;
+ --       }
+ --   }
+xlua.private_accessible(CS.Gun)
+xlua.hotfix(CS.Gun,'Attack',function(self)
+	if UnityEngine.Input.GetMouseButtonDown(0) then
+
+
+        if UnityEngine.EventSystems.EventSystem.current:IsPointerOverGameObject() then
+            return
+        end
+
+        if self.gold < 1+(self.gunLevel-1)*2 then
+            UnityEngine.Debug.Log('gold不足')
+            return
+        end
+        self.bullectAudio.clip = self.bullectAudios[self.gunLevel - 1]
+        self.bullectAudio:Play()
+
+        if self.Butterfly then
+            UnityEngine.GameObject.Instantiate(self.Bullects[self.gunLevel - 1], self.attackPos.position, self.attackPos.rotation * UnityEngine.Quaternion.Euler(0, 0, 20))
+            UnityEngine.GameObject.Instantiate(self.Bullects[self.gunLevel - 1], self.attackPos.position, self.attackPos.rotation * UnityEngine.Quaternion.Euler(0, 0, -20))
+        end
+
+        UnityEngine.GameObject.Instantiate(self.Bullects[self.gunLevel - 1], self.attackPos.position, self.attackPos.rotation)
+
+
+        if not self.canShootForFree then
+            self:GoldChange(-1 - (self.gunLevel - 1) * 2)
+        end
+
+       self.attackCD = 0
+       self.attack = false
+    end
+end)

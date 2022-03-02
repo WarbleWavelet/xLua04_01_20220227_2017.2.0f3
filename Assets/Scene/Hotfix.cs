@@ -7,7 +7,7 @@ using XLua;
 
 
 [Hotfix]
-public class Test04_LuaEnv : MonoBehaviour
+public class Hotfix : MonoBehaviour
     {
         #if true// USE_LUA
          LuaEnv xLuaEnv;
