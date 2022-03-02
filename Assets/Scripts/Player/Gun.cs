@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XLua;
 
 /// <summary> 枪 </summary>
-
+[Hotfix]
 public class Gun : MonoBehaviour
 {
     #region 子弹 单例
@@ -75,8 +76,8 @@ public class Gun : MonoBehaviour
   private void Awake()
     {
         instance = this;
-        gold = 1000;
-        diamands = 1000;
+        gold = 5;
+        diamands = 5;
         level = 2;
         bullectAudio = GetComponent<AudioSource>();
         Init();
@@ -188,6 +189,7 @@ public class Gun : MonoBehaviour
 
     #region 攻击
     /// <summary>攻击方法</summary>
+    [LuaCallCSharp]
     private void Attack()
     {
 

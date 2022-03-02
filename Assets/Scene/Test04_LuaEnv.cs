@@ -16,12 +16,14 @@ public class Test04_LuaEnv : MonoBehaviour
                 {
                     xLuaEnv = new LuaEnv();
                     xLuaEnv.AddLoader(MyLoader_Return_ByteArr);
-                    xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize'");
+                    //xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize'");
+                    xLuaEnv.DoString("require '02 金币钻石不够的处理/Gun_Attack'");
                 }
 
                 private void OnDestroy()
                 {
-                    xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize_Dispose'");
+                    //xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize_Dispose'");
+                    xLuaEnv.DoString("require '02 金币钻石不够的处理/Gun_Attack_Dispose'");
                     xLuaEnv.Dispose();
                 }
             #endregion
