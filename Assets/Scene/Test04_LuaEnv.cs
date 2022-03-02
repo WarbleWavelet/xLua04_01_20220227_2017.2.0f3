@@ -16,21 +16,21 @@ public class Test04_LuaEnv : MonoBehaviour
                 {
                     xLuaEnv = new LuaEnv();
                     xLuaEnv.AddLoader(MyLoader_Return_ByteArr);
-                    xLuaEnv.DoString("require 'fish'");
+                    xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize'");
                 }
 
                 private void OnDestroy()
                 {
-                    xLuaEnv.DoString("require 'fishDispose'");
+                    xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize_Dispose'");
                     xLuaEnv.Dispose();
                 }
             #endregion
             #region 辅助1
                 /// <summary>返回值为字节数组</summary>
-                byte[] MyLoader_Return_ByteArr(ref string filePath)
+                byte[] MyLoader_Return_ByteArr( ref string filePath)
                 {
                     print("有返回值");
-                    string absPath = @"D:\Data\Projects\Unity\xLua04_01_20220227_2017.2.0f3\Assets\PlayerGamePackage\" + filePath+".lua.txt";
+                    string absPath = @"D:\Data\Projects\Unity\xLua04_01_20220227_2017.2.0f3\Assets\PlayerGamePackage\"+ filePath+ ".lua.txt";
                     return System.Text.Encoding.UTF8.GetBytes(File.ReadAllText(absPath) );
                 }
 
