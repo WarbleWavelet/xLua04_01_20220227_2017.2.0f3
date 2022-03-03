@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XLua;
 
-
-
+[Hotfix]
 /// <summary> 会隐藏的boss</summary>
 public class InvisibleBoss : Boss
 {
@@ -16,7 +16,7 @@ public class InvisibleBoss : Boss
     private BoxCollider box;
     private SpriteRenderer sr;
 
-
+    [LuaCallCSharp]
     void Start()
     {
         fire = transform.Find("Fire").gameObject;

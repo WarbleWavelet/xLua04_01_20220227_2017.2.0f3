@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XLua;
 
+[Hotfix]
 
 /// <summary>有护盾的boss</summary>
 public class DeffendBoss : Boss
@@ -13,7 +15,7 @@ public class DeffendBoss : Boss
 
     public GameObject deffend;
 
-
+    [LuaCallCSharp]
     void Start()
     {
         fire = transform.Find("Fire").gameObject;

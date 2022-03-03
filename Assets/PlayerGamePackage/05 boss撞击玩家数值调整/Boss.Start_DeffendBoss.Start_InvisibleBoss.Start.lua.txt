@@ -1,0 +1,34 @@
+--    void Start()
+--    {
+--        fire = transform.Find("Fire").gameObject;
+--        ice = transform.Find("Ice").gameObject;
+--        iceAni = ice.transform.GetComponent<Animator>();
+--        gameObjectAni = GetComponent<Animator>();
+--        bossAudio = GetComponent<AudioSource>();
+--        playerTransform = Gun.Instance.transform;
+--        m_reduceGold = 10;
+--        m_reduceDiamond = 0;
+--    }
+
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+local util=require "05 boss撞击玩家数值调整/util"
+
+
+xlua.private_accessible(CS.Boss)
+util.hotfix_ex(CS.Boss,'Start',function(self)
+	self.Start(self)
+	self.m_reduceGold = self.m_reduceGold-20
+end)
+
+xlua.private_accessible(CS.DeffendBoss)
+util.hotfix_ex(CS.DeffendBoss,'Start',function(self)
+	self.Start(self)
+	self.m_reduceGold = self.m_reduceGold-30
+end)
+
+xlua.private_accessible(CS.InvisibleBoss)
+util.hotfix_ex(CS.InvisibleBoss,'Start',function(self)
+	self.Start(self)
+	self.m_reduceDiamond = self.m_reduceDiamond-5
+end)

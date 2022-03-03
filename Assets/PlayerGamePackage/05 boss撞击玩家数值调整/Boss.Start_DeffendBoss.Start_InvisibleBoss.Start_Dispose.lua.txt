@@ -1,0 +1,5 @@
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Boss,'Start',nil)
+xlua.hotfix(CS.InvisibleBoss,'Start',nil)
+xlua.hotfix(CS.DeffendBoss,'Start',nil)
