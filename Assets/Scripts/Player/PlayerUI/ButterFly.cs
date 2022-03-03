@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+using XLua;
+
+[Hotfix]
 /// <summary> 散弹按钮 </summary>
 public class ButterFly : MonoBehaviour
 {
@@ -23,7 +27,7 @@ public class ButterFly : MonoBehaviour
 
     }
 
-
+    [LuaCallCSharp]
     void Start()
     {
         reduceDiamands = 10;

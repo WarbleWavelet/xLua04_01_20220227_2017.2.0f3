@@ -241,6 +241,7 @@ public class Gun : MonoBehaviour
     /// <summary>增减钻石</summary>
     public void DiamandsChange(int number)
     {
+
         diamands += number;
     }
     #endregion

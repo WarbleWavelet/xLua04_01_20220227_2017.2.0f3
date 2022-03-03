@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XLua;
+
+[Hotfix]
 
 /// <summary> 灼烧 </summary>
 public class Fire : MonoBehaviour
@@ -22,7 +25,7 @@ public class Fire : MonoBehaviour
 
     }
 
-
+    [LuaCallCSharp]
     void Start()
     {
         reduceDiamands = 10;

@@ -3,7 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XLua;
+
+
 /// <summary> 冰冻  </summary>
+[Hotfix]
 public class Ice : MonoBehaviour
 {
 
@@ -24,7 +28,7 @@ public class Ice : MonoBehaviour
         fireAudio = GetComponent<AudioSource>();
     }
 
-
+    [LuaCallCSharp]
     void Start()
     {
         reduceDiamands = 10;

@@ -12,18 +12,19 @@ public class Hotfix : MonoBehaviour
         #if true// USE_LUA
          LuaEnv xLuaEnv;
             #region 生命
-                void Start()
+                void Awake()
                 {
                     xLuaEnv = new LuaEnv();
                     xLuaEnv.AddLoader(MyLoader_Return_ByteArr);
                     //xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize'");
-                    xLuaEnv.DoString("require '02 金币钻石不够的处理/Gun_Attack'");
+                    //xLuaEnv.DoString("require '02 金币钻石不够的处理/Gun_Attack'");
+                    xLuaEnv.DoString("require '04 技能扣钻石太多的数值/Fire.Start_Ice.Start_ButterFly.Start'");
                 }
 
                 private void OnDestroy()
                 {
                     //xLuaEnv.DoString("require '01 宝箱奖励太挤/Treasour_CreatePrize_Dispose'");
-                    xLuaEnv.DoString("require '02 金币钻石不够的处理/Gun_Attack_Dispose'");
+                    xLuaEnv.DoString("require '04 技能扣钻石太多的数值/Fire.Start_Ice.Start_ButterFly.Start_Dispose'");
                     xLuaEnv.Dispose();
                 }
             #endregion
