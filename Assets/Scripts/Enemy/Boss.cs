@@ -48,8 +48,8 @@ public class Boss : MonoBehaviour
         gameObjectAni = GetComponent<Animator>();
         bossAudio = GetComponent<AudioSource>();
         playerTransform = Gun.Instance.transform;
-        m_reduceGold = 10;
-        m_reduceDiamond = 0;
+        m_reduceGold = 0;
+        m_reduceDiamond = -5;
     }
 
     // Update is called once per frame
