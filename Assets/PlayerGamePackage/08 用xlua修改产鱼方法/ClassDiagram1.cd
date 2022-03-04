@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Gun" Collapsed="true">
-    <Position X="0.75" Y="2.75" Width="1.5" />
+  <Class Name="FishSpawner" Collapsed="true">
+    <Position X="1.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEQGAUBAAQgAAQBQIAAgOAACYINEAJDAQAETICIEQGA=</HashCode>
-      <FileName>Assets\Scripts\Player\Gun.cs</FileName>
+      <HashCode>oEYAAAAAACAQAEhAEAQAAkhQAABgwAAAAAJCAAAQAIA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\FishSpawner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Hotfix" Collapsed="true">
-    <Position X="3" Y="2" Width="1.5" />
+    <Position X="2" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEA=</HashCode>
       <FileName>Assets\Scene\Hotfix.cs</FileName>

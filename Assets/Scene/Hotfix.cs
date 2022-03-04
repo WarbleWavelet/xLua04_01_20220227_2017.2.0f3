@@ -24,6 +24,7 @@ public class Hotfix : MonoBehaviour
                     //xLuaEnv.DoString("require '05 boss撞击玩家数值调整/Boss.Start_DeffendBoss.Start_InvisibleBoss.Start'");
                     //xLuaEnv.DoString("require '06 boss撞击玩家当钻石金币不够时的显示/Gun.GoldChange_Gun.DiamandsChange'");
                     xLuaEnv.DoString("require '07 子弹3的使用扣除方式的更改/Gun_Attack'");
+                    xLuaEnv.DoString("require '08 用xlua修改产鱼方法/FishSpawner.CreateAFish'");
                 }
 
                 private void OnDestroy()
@@ -34,6 +35,7 @@ public class Hotfix : MonoBehaviour
                     //xLuaEnv.DoString("require '05 boss撞击玩家数值调整/Boss.Start_DeffendBoss.Start_InvisibleBoss.Start_Dispose'");
                     //xLuaEnv.DoString("require '06 boss撞击玩家当钻石金币不够时的显示/Gun.GoldChange_Gun.DiamandsChange_Dispose'");
                     xLuaEnv.DoString("require '07 子弹3的使用扣除方式的更改/Gun_Attack_Dispose'");
+                    xLuaEnv.DoString("require '08 用xlua修改产鱼方法/FishSpawner.CreateAFish_Dispose'");
                     xLuaEnv.Dispose();
                 }
             #endregion

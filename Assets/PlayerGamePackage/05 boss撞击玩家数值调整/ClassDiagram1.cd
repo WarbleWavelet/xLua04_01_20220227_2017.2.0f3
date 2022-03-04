@@ -24,5 +24,12 @@
       <FileName>Assets\Scripts\Enemy\InvisibleBoss.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Hotfix" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEA=</HashCode>
+      <FileName>Assets\Scene\Hotfix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

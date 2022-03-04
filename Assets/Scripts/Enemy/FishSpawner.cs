@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XLua;
 
+
+[Hotfix]
 /// <summary> 产鱼Spawner </summary>
 
 public class FishSpawner : MonoBehaviour
@@ -49,15 +52,8 @@ public class FishSpawner : MonoBehaviour
     {
         SpawnFishGroup();
         CreateAFish();
-
-
- 
-
     }
     #endregion
-
-
-
 
     #region 辅助1
     void Init()
@@ -86,7 +82,7 @@ public class FishSpawner : MonoBehaviour
         specialFishSchoolSpawner[0] = GameObject.Find("Place1").transform;
         specialFishSchoolSpawner[1] = GameObject.Find("Place2").transform;
     }
-
+    [LuaCallCSharp]
     /// <summary>产生只鱼</summary>
     private void CreateAFish()
     {

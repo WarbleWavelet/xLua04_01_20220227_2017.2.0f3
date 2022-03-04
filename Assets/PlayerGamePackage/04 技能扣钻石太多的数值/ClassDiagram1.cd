@@ -24,5 +24,12 @@
       <FileName>Assets\Scripts\Player\PlayerUI\Fire.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Hotfix" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEA=</HashCode>
+      <FileName>Assets\Scene\Hotfix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>
