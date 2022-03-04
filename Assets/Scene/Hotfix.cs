@@ -22,7 +22,8 @@ public class Hotfix : MonoBehaviour
                     //xLuaEnv.DoString("require '02 金币钻石不够的处理/Gun_Attack'");
                     //xLuaEnv.DoString("require '04 技能扣钻石太多的数值/Fire.Start_Ice.Start_ButterFly.Start'");
                     //xLuaEnv.DoString("require '05 boss撞击玩家数值调整/Boss.Start_DeffendBoss.Start_InvisibleBoss.Start'");
-                    xLuaEnv.DoString("require '06 boss撞击玩家当钻石金币不够时的显示/Gun.GoldChange_Gun.DiamandsChange'");
+                    //xLuaEnv.DoString("require '06 boss撞击玩家当钻石金币不够时的显示/Gun.GoldChange_Gun.DiamandsChange'");
+                    xLuaEnv.DoString("require '07 子弹3的使用扣除方式的更改/Gun_Attack'");
                 }
 
                 private void OnDestroy()
@@ -31,7 +32,8 @@ public class Hotfix : MonoBehaviour
                     //xLuaEnv.DoString("require '02 金币钻石不够的处理/Treasour_CreatePrize_Dispose'");
                     //xLuaEnv.DoString("require '04 技能扣钻石太多的数值/Fire.Start_Ice.Start_ButterFly.Start_Dispose'");
                     //xLuaEnv.DoString("require '05 boss撞击玩家数值调整/Boss.Start_DeffendBoss.Start_InvisibleBoss.Start_Dispose'");
-                    xLuaEnv.DoString("require '06 boss撞击玩家当钻石金币不够时的显示/Gun.GoldChange_Gun.DiamandsChange_Dispose'");
+                    //xLuaEnv.DoString("require '06 boss撞击玩家当钻石金币不够时的显示/Gun.GoldChange_Gun.DiamandsChange_Dispose'");
+                    xLuaEnv.DoString("require '07 子弹3的使用扣除方式的更改/Gun_Attack_Dispose'");
                     xLuaEnv.Dispose();
                 }
             #endregion

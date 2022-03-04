@@ -76,8 +76,8 @@ public class Gun : MonoBehaviour
   private void Awake()
     {
         instance = this;
-        gold = 1;
-        diamands = 1;
+        gold = 1000;
+        diamands = 1000;
         level = 2;
         bullectAudio = GetComponent<AudioSource>();
         Init();
