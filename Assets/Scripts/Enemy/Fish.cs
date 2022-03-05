@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XLua;
 
 
+[Hotfix]
 /// <summary> 普通鱼的类 </summary>
 
 public class Fish : MonoBehaviour
@@ -86,6 +88,8 @@ public class Fish : MonoBehaviour
             rotateTime += Time.deltaTime;
         }
     }
+
+    [LuaCallCSharp]
     public void TakeDamage(int attackValue)
     {
         //灼烧伤害*2

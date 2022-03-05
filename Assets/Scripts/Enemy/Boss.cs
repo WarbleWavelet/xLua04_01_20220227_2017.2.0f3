@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XLua;
-/// <summary>
-/// boss脚本
-/// </summary>
+/// <summary> boss脚本 </summary>
 [Hotfix]
 public class Boss : MonoBehaviour
 {
@@ -38,7 +36,10 @@ public class Boss : MonoBehaviour
     protected bool isAttack;
 
     #endregion
-  
+
+
+
+    #region 生命
     [LuaCallCSharp]
     void Start()
     {
@@ -96,8 +97,12 @@ public class Boss : MonoBehaviour
         }
 
     }
+    #endregion
 
-    public virtual void TakeDamage(int attackValue)
+
+    #region 辅助1
+    [LuaCallCSharp]
+   public virtual void TakeDamage(int attackValue)
     {
         if (Gun.Instance.Fire)
         {
@@ -178,6 +183,8 @@ public class Boss : MonoBehaviour
             }
         }
     }
+    #endregion
+ 
 
 
 

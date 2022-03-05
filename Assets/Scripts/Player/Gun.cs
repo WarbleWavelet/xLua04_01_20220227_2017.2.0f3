@@ -243,7 +243,6 @@ public class Gun : MonoBehaviour
     public void DiamandsChange(int number)
     {
 
-        print("000");
         diamands += number;
     }
     #endregion

@@ -22,5 +22,7 @@ public class TimeScale : MonoBehaviour {
     void Update()
     {
         UnityEngine.Time.timeScale = gameScale;  
+
+
     }
 }

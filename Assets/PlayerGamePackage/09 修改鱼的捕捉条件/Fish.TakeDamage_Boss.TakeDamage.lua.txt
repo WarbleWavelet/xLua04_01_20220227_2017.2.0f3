@@ -1,0 +1,108 @@
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+
+--[[
+    public void TakeDamage(int attackValue)
+    {
+        //灼烧伤害*2
+        if (Gun.Instance.Fire)
+        {
+            attackValue *= 2;
+        }
+        //
+        hp -= attackValue;
+        if (hp <= 0)
+        {
+            isDead = true;
+            for (int i = 0; i < 9; i++)
+            {
+                Instantiate(pao, transform.position, Quaternion.Euler(transform.eulerAngles + new Vector3(0, 45 * i, 0)));
+            }
+
+            gameObjectAni.SetTrigger("Die");
+            Invoke("Prize", 0.7f);
+        }
+    }
+--]]
+xlua.private_accessible(CS.Fish)
+xlua.hotfix(CS.Fish,'TakeDamage',function(self,attackValue)
+
+    if  CS.Gun.Instance.Fire then
+        attackValue = attackValue * 2
+    end
+    --hp 4 10 50
+    local catchValue=UnityEngine.Mathf.Floor(UnityEngine.Random.Range(0,100) )
+    local p1=50
+    local p2=2
+
+    if  catchValue <=  (p1-(self.hp-catchValue))/p2 then  
+        self.isDead = true
+
+        for i=0,8,1 do
+            UnityEngine.GameObject.Instantiate(self.pao, self.transform.position, UnityEngine.Quaternion.Euler(self.transform.eulerAngles + UnityEngine.Vector3(0, 45 * i, 0)))
+        end
+
+        self.gameObjectAni:SetTrigger("Die")
+        self:Invoke("Prize", 0.7)
+    end
+end)
+
+
+
+--[[
+   public virtual void TakeDamage(int attackValue)
+    {
+        if (Gun.Instance.Fire)
+        {
+            attackValue *= 2;
+        }
+
+        hp -= attackValue;
+        if (hp <= 0)
+        {
+            Instantiate(deadEeffect, transform.position, transform.rotation);
+            Gun.Instance.GoldChange(GetGold * 10);
+            Gun.Instance.DiamandsChange(GetDiamands * 10);
+
+            for (int i = 0; i < 11; i++)
+            {
+                GoldPrize_Bloom(i);
+            }
+            for (int i = 0; i < 11; i++)
+            {
+                DiamandsPrize_Bloom(i);
+            }
+            Destroy(this.gameObject);
+        }
+    }
+
+--]]
+
+xlua.private_accessible(CS.Boss)
+xlua.hotfix(CS.Boss,'TakeDamage',function(self,attackValue)
+    if CS.Gun.Instance.Fire then
+        attackValue = attackValue* 2
+    end
+
+    --
+    local catchValue=UnityEngine.Mathf.Floor(UnityEngine.Random.Range(0,100) )
+    local p1=3
+    local p2=10
+
+    if  catchValue <=  (catchValue*p1 - self.hp/p2) then  
+        UnityEngine.GameObject.Instantiate(self.deadEeffect, self.transform.position, self.transform.rotation)
+        CS.Gun.Instance:GoldChange(self.GetGold * 10)
+        CS.Gun.Instance:DiamandsChange(self.GetDiamands * 10)
+
+        for i = 0,10,1 do
+            self:GoldPrize_Bloom(i) --进行可读性封装了
+        end
+
+        for i = 0,10,1 do
+            self:DiamandsPrize_Bloom(i) --进行可读性封装了
+        end
+
+
+        UnityEngine.Object.Destroy(self.gameObject)
+    end
+end)

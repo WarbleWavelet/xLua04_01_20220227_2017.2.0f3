@@ -16,11 +16,9 @@ util.hotfix_ex(CS.Gun,'GoldChange',function(self,number)
 	end
 end)
 util.hotfix_ex(CS.Gun,'DiamandsChange',function(self,number)
-	UnityEngine.Debug.Log('111')
 	self.DiamandsChange(self,number)
 	if self.diamands <-number then
 		self.diamands=0
-		UnityEngine.Debug.Log('222')
 		return
 	end
 end)
