@@ -1,0 +1,67 @@
+ManifestFileVersion: 0
+CRC: 3718178314
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 114c0fbd4460670d02a56ff3ba6dc143
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e6b5617a1f579c6966c129e27f67d99
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 058595101f7ec7045ba3919cd2fa6cd7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ed7ac6d072a799f45962027e2fd12389, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cf8f62f0030a9c648aa6d622cb780e29, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bd308cf16c9f8334a86ed1be9c2ad378, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3b5edf89ece77c34cb6e5befdabb8320, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 683fffd9e8699d747851e751a810c62f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5c020d9acfdf6d042ab8559832896e51, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3d8a2bbcd06a37b48aeabe6e86606f35, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Prefabs/Enemy/Fish1.prefab
+- Assets/Resources/Prefabs/Enemy/level2fish2.prefab
+- Assets/Resources/Prefabs/Enemy/Boss2.prefab
+- Assets/Resources/Prefabs/Enemy/Fish3.prefab
+- Assets/Resources/Prefabs/Enemy/level3fish2.prefab
+- Assets/Resources/Prefabs/Enemy/Boss1.prefab
+- Assets/Resources/Prefabs/Enemy/level2fish3.prefab
+- Assets/Resources/Prefabs/Enemy/level3fish3.prefab
+- Assets/Resources/Prefabs/Enemy/Fish2.prefab
+- Assets/Resources/Prefabs/Enemy/level2fish1.prefab
+Dependencies: []

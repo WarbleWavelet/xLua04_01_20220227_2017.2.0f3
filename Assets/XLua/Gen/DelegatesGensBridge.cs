@@ -127,7 +127,62 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp4(object p0, int p1)
+		public void __Gen_Delegate_Imp4(object p0, object p1)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int err_func =LuaAPI.load_error_func(L, errorFuncRef);
+                ObjectTranslator translator = luaEnv.translator;
+                
+                LuaAPI.lua_getref(L, luaReference);
+                
+                translator.PushAny(L, p0);
+                translator.PushAny(L, p1);
+                
+                int __gen_error = LuaAPI.lua_pcall(L, 2, 0, err_func);
+                if (__gen_error != 0)
+                    luaEnv.ThrowExceptionFromError(err_func - 1);
+                
+                
+                
+                LuaAPI.lua_settop(L, err_func - 1);
+                
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public UnityEngine.GameObject __Gen_Delegate_Imp5(object p0)
+		{
+#if THREAD_SAFE || HOTFIX_ENABLE
+            lock (luaEnv.luaEnvLock)
+            {
+#endif
+                RealStatePtr L = luaEnv.rawL;
+                int err_func =LuaAPI.load_error_func(L, errorFuncRef);
+                ObjectTranslator translator = luaEnv.translator;
+                
+                LuaAPI.lua_getref(L, luaReference);
+                
+                translator.PushAny(L, p0);
+                
+                int __gen_error = LuaAPI.lua_pcall(L, 1, 1, err_func);
+                if (__gen_error != 0)
+                    luaEnv.ThrowExceptionFromError(err_func - 1);
+                
+                
+                UnityEngine.GameObject __gen_ret = (UnityEngine.GameObject)translator.GetObject(L, err_func + 1, typeof(UnityEngine.GameObject));
+                LuaAPI.lua_settop(L, err_func - 1);
+                return  __gen_ret;
+#if THREAD_SAFE || HOTFIX_ENABLE
+            }
+#endif
+		}
+        
+		public void __Gen_Delegate_Imp6(object p0, int p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -155,7 +210,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp5(object p0, int p1, int p2)
+		public void __Gen_Delegate_Imp7(object p0, int p1, int p2)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -184,35 +239,7 @@ namespace XLua
 #endif
 		}
         
-		public void __Gen_Delegate_Imp6(object p0, object p1)
-		{
-#if THREAD_SAFE || HOTFIX_ENABLE
-            lock (luaEnv.luaEnvLock)
-            {
-#endif
-                RealStatePtr L = luaEnv.rawL;
-                int err_func =LuaAPI.load_error_func(L, errorFuncRef);
-                ObjectTranslator translator = luaEnv.translator;
-                
-                LuaAPI.lua_getref(L, luaReference);
-                
-                translator.PushAny(L, p0);
-                translator.PushAny(L, p1);
-                
-                int __gen_error = LuaAPI.lua_pcall(L, 2, 0, err_func);
-                if (__gen_error != 0)
-                    luaEnv.ThrowExceptionFromError(err_func - 1);
-                
-                
-                
-                LuaAPI.lua_settop(L, err_func - 1);
-                
-#if THREAD_SAFE || HOTFIX_ENABLE
-            }
-#endif
-		}
-        
-		public UnityEngine.GameObject __Gen_Delegate_Imp7(object p0, object p1)
+		public UnityEngine.GameObject __Gen_Delegate_Imp8(object p0, object p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -240,7 +267,7 @@ namespace XLua
 #endif
 		}
         
-		public UnityEngine.Vector3 __Gen_Delegate_Imp8(object p0, int p1)
+		public UnityEngine.Vector3 __Gen_Delegate_Imp9(object p0, int p1)
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)
@@ -268,7 +295,7 @@ namespace XLua
 #endif
 		}
         
-		public Gun __Gen_Delegate_Imp9()
+		public Gun __Gen_Delegate_Imp10()
 		{
 #if THREAD_SAFE || HOTFIX_ENABLE
             lock (luaEnv.luaEnvLock)

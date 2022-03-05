@@ -1,0 +1,39 @@
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+
+--[[
+    void Init()
+    {
+        fishList = new GameObject[8];
+        fishList[0] = (LoadEnemy("Fish1"));
+        fishList[1] = (LoadEnemy("Fish2"));
+        fishList[2] = (LoadEnemy("Fish3"));
+        fishList[3] = (LoadEnemy("level2fish1"));
+        fishList[4] = (LoadEnemy("level2fish2"));
+        fishList[5] = (LoadEnemy("level2fish3"));
+        fishList[6] = (LoadEnemy("level3fish2"));
+        fishList[7] = (LoadEnemy("level3fish3"));
+
+        item = new GameObject[4];
+        item[0] = (LoadItem("Shell"));
+        item[1] = (LoadItem("Missile1"));
+        item[2] = (LoadItem("Missile2"));
+        item[3] = (LoadItem("QiPao"));
+
+        boss = (LoadEnemy("Boss1"));
+        boss2 = (LoadEnemy("Boss2"));
+        boss3 = (LoadEnemy("Boss3"));
+
+        specialFishSchoolSpawner = new Transform[2];
+        specialFishSchoolSpawner[0] = GameObject.Find("Place1").transform;
+        specialFishSchoolSpawner[1] = GameObject.Find("Place2").transform;
+    }
+--]]
+
+
+xlua.private_accessible(CS.FishSpawner)
+xlua.hotfix(CS.FishSpawner,'Start',function(self)
+    self:Init()
+    UnityEngine.Debug.Log("进入")
+    CS.Hotfix.ReadAssetBundle('level3fish3', 'gameobject\\enemy.ab')--08 FishSpawner会用到
+end)

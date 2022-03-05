@@ -18,8 +18,6 @@ public class TimeScale : MonoBehaviour {
             gameScale = value*10f;
         });
 
-
-        print(Random.Range(0,100));
     }
 	
     void Update()

@@ -42,6 +42,7 @@ public class FishSpawner : MonoBehaviour
 
 
     #region 生命
+    [LuaCallCSharp]
     void Start()
     {
         Init();
@@ -56,6 +57,7 @@ public class FishSpawner : MonoBehaviour
     #endregion
 
     #region 辅助1
+    [LuaCallCSharp]
     void Init()
     {
         fishList = new GameObject[8];

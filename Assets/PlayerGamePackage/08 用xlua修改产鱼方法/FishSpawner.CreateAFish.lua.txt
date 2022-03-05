@@ -107,8 +107,6 @@ private void SpawnFishGroup()
 local util=require "05 boss撞击玩家数值调整/util"
 
 
-
-
 xlua.private_accessible(CS.FishSpawner)
 util.hotfix_ex(CS.FishSpawner,'CreateAFish',function(self)
     --单种鱼的生成
@@ -128,6 +126,7 @@ util.hotfix_ex(CS.FishSpawner,'CreateAFish',function(self)
         --0<20      产生气泡
         --0<42      3条小鱼，1道具
         --43<72     2大鱼
+        --73<83     11后面AB包加载的鱼
         --84<86     boss
         --87<88     boss2
         --100       boss3
@@ -147,18 +146,21 @@ util.hotfix_ex(CS.FishSpawner,'CreateAFish',function(self)
 			for i=0,1,1 do
 				self:CreateGameObject(self.fishList[bigFishTypeIndex])
 			end
-			self:CreateGameObject(self.item[itemTypeIndex])			
-			
+			self:CreateGameObject(self.item[itemTypeIndex])		
+            
+		elseif self.itemNum >=73 and self.itemNum <= 83 then
+            newfish=CS.Hotfix.GetGameObject("level3fish3")
+			for i=0,1,1 do
+				self:CreateGameObject( newfish)
+			end
+			self:CreateGameObject(self.item[itemTypeIndex])		
 		elseif self.itemNum >= 84 and self.itemNum <= 86 then
-            UnityEngine.Debug.Log('大鱼1')
 			self:CreateGameObject(self.boss)
 			
 		elseif self.itemNum >= 87 and self.itemNum <= 88 then
-            UnityEngine.Debug.Log('大鱼2')
 			self:CreateGameObject(self.boss2)
 			
 		elseif self.itemNum ==100 then
-            UnityEngine.Debug.Log('大鱼3')
 			self:CreateGameObject(self.boss3)
 			
 		else
