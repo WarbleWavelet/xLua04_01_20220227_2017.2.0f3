@@ -158,6 +158,7 @@ public class Gun : MonoBehaviour
     #endregion
 
     #region 旋转
+    [LuaCallCSharp]
     /// <summary>旋转枪</summary>
     private void RotateGun()
     {

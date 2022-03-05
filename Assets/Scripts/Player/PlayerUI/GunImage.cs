@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XLua;
+
+[Hotfix]
 
 /// <summary> 负责UI显示的枪 </summary>
 public class GunImage : MonoBehaviour
@@ -51,6 +54,8 @@ public class GunImage : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, idlePos.position, 0.2f);
     }
 
+
+    [LuaCallCSharp]
     /// <summary>旋转枪</summary>
     private void RotateGun()
     {
