@@ -41,20 +41,20 @@ canSpawnNewFish=true
 changeMapTimer=0
 
 --[[]]
-xlua.private_accessible(CS.HotfixEmpty)
-xlua.hotfix(CS.HotfixEmpty,'Start',function(self)
-	--CS.Hotfix.ReadAssetBundle('SeaWave', 'gameobject\\wave.ab')--要先加载所以统一放11那里，08 FishSpawner会用到
+xlua.private_accessible(CS.Gun.Instance.hotfixScriptEmpty)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'Start',function(self)
+	--CS.Gun.Instance.hotfixScript.ReadAssetBundle('SeaWave', 'gameobject\\wave.ab')--要先加载所以统一放11那里，08 FishSpawner会用到
 	self:Invoke("BehaviourMethod",8)
 end)
 
 --[[]]
-xlua.hotfix(CS.HotfixEmpty,'Update',function(self)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'Update',function(self)
 	local speed=4
 	self.transform:Translate( -self.transform.right * 4 * UnityEngine.Time.deltaTime, UnityEngine.Space.World)
 end)
 
 --[[]]
-xlua.hotfix(CS.HotfixEmpty,'OnTriggerEnter',function(self, other)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'OnTriggerEnter',function(self, other)
 	if other:CompareTag("Untagged")==false and other:CompareTag("Wall")==false then
 		
 		UnityEngine.Object.Destroy(other.gameObject)
@@ -63,7 +63,7 @@ xlua.hotfix(CS.HotfixEmpty,'OnTriggerEnter',function(self, other)
 end)
 
 --[[]]
-xlua.hotfix(CS.HotfixEmpty,'BehaviourMethod',function(self)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'BehaviourMethod',function(self)
 	
 	CS.Gun.Instance.level=CS.Gun.Instance.level+1
 	

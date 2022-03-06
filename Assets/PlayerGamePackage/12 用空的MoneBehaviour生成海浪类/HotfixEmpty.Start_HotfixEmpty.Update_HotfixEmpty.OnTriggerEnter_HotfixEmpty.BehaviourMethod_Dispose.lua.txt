@@ -1,6 +1,6 @@
 local UnityEngine=CS.UnityEngine
 UnityEngine.Debug.Log('进入LuaDispose文件')
-xlua.hotfix(CS.HotfixEmpty,'Start',nil)
-xlua.hotfix(CS.HotfixEmpty,'Update',nil)
-xlua.hotfix(CS.HotfixEmpty,'OnTriggerEnter',nil)
-xlua.hotfix(CS.HotfixEmpty,'BehaviourMethod',nil)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'Start',nil)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'Update',nil)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'OnTriggerEnter',nil)
+xlua.hotfix(CS.Gun.Instance.hotfixScriptEmpty,'BehaviourMethod',nil)

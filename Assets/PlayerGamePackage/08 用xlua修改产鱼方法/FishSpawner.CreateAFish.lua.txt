@@ -113,7 +113,7 @@ util.hotfix_ex(CS.FishSpawner,'CreateAFish',function(self)
     --12 海浪限制
     if canSpawnNewFish==true then
         if changeMapTimer>=5 then
-            go=CS.Hotfix.GetGameObject("SeaWave")
+            go=CS.Gun.Instance.hotfixScript.GetGameObject("SeaWave")
             UnityEngine.GameObject.Instantiate(go)
             canSpawnNewFish=false
             changeMapTimer=0
@@ -164,7 +164,7 @@ util.hotfix_ex(CS.FishSpawner,'CreateAFish',function(self)
 			self:CreateGameObject(self.item[itemTypeIndex])		
             
 		elseif self.itemNum >=73 and self.itemNum <= 83 then
-            newfish=CS.Hotfix.GetGameObject("level3fish3")
+            newfish=CS.Gun.Instance.hotfixScript.GetGameObject("level3fish3")
 			for i=0,1,1 do
 				self:CreateGameObject( newfish)
 			end

@@ -1,0 +1,55 @@
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+
+--[[
+    private void RotateGun()//Gun
+    {
+
+        float h = Input.GetAxisRaw("Mouse Y");
+        float v = Input.GetAxisRaw("Mouse X");
+
+        transform.Rotate(-Vector3.forward * v * rotateSpeed);
+        transform.Rotate(Vector3.forward * h * rotateSpeed);
+
+        ClampAngle();
+        //245,115
+    }
+
+--]]
+--[[
+    private void RotateGun()//GunImage
+    {
+
+        float h = Input.GetAxisRaw("Mouse Y");
+        float v = Input.GetAxisRaw("Mouse X");
+
+        transform.Rotate(-Vector3.forward * v * rotateSpeed);
+        transform.Rotate(Vector3.forward * h * rotateSpeed);
+
+        ClampAngle();
+    }
+--]]
+
+xlua.private_accessible(CS.Gun)
+xlua.hotfix(CS.Gun,'RotateGun',function(self)   
+
+    if UnityEngine.Input.GetKey(UnityEngine.KeyCode.A) then
+        self.transform:Rotate(UnityEngine.Vector3.forward * self.rotateSpeed)
+    elseif UnityEngine.Input.GetKey(UnityEngine.KeyCode.D) then
+        self.transform:Rotate(-UnityEngine.Vector3.forward * self.rotateSpeed)
+    end
+
+    self:ClampAngle()
+end)
+
+xlua.private_accessible(CS.GunImage)
+xlua.hotfix(CS.GunImage,'RotateGun',function(self)   
+
+    if UnityEngine.Input.GetKey(UnityEngine.KeyCode.A) then
+        self.transform:Rotate(UnityEngine.Vector3.forward * self.rotateSpeed)
+    elseif UnityEngine.Input.GetKey(UnityEngine.KeyCode.D) then
+        self.transform:Rotate(-UnityEngine.Vector3.forward * self.rotateSpeed)
+    end
+
+    self:ClampAngle()
+end)

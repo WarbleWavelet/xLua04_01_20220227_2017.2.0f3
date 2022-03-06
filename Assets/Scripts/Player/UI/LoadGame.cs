@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
+using System.IO;
 
 /// <summary>加载游戏</summary>
 public class LoadGame : MonoBehaviour 
@@ -14,7 +16,7 @@ public class LoadGame : MonoBehaviour
 
     void Start () 
     {
-        sceneIndex=2;
+        sceneIndex =2;
         LoadGameMethod();
         
 	}
@@ -22,6 +24,9 @@ public class LoadGame : MonoBehaviour
     #region 辅助12
     public void LoadGameMethod()
     {
+        StartCoroutine(A(@"http://localhost/" + "fish.lua.txt", @"D:\Data\Projects\Unity\xLua04_01_20220227_2017.2.0f3\Assets\PlayerGamePackage\fish.lua.txt"));
+        StartCoroutine(A(@"http://localhost/" + "fish_Dispose.lua.txt", @"D:\Data\Projects\Unity\xLua04_01_20220227_2017.2.0f3\Assets\PlayerGamePackage\fish_Dispose.lua.txt"));
+
         StartCoroutine(StartLoading_4(sceneIndex));
     }
 
@@ -61,5 +66,16 @@ public class LoadGame : MonoBehaviour
     #endregion
 
 
+    #region 加載
+
+    
+    IEnumerator A(string from, string to)
+    {
+        UnityWebRequest request = UnityWebRequest.Get(from);
+        yield return request.SendWebRequest();
+        string fromRes = request.downloadHandler.text;
+        File.WriteAllText(to, fromRes);
+    }
+    #endregion
 
 }

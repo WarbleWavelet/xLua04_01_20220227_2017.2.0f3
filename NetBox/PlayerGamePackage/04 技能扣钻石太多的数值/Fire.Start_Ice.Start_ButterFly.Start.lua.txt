@@ -1,0 +1,29 @@
+
+
+--    void Start()
+--    {
+--        reduceDiamands = 10;
+--    }
+
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+
+
+
+xlua.private_accessible(CS.Fire)
+xlua.hotfix(CS.Fire,'Start',function(self)
+	UnityEngine.Debug.Log('11')
+	self.reduceDiamands = 8
+end)
+
+xlua.private_accessible(CS.Ice)
+xlua.hotfix(CS.Ice,'Start',function(self)
+	self.reduceDiamands = 8
+	UnityEngine.Debug.Log('22')
+end)
+
+xlua.private_accessible(CS.ButterFly)
+xlua.hotfix(CS.ButterFly,'Start',function(self)
+	self.reduceDiamands = 8
+	UnityEngine.Debug.Log('33')
+end)

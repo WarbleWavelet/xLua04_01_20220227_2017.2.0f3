@@ -1,0 +1,3 @@
+fish是将以前的lua合并起来
+1、需要开启NetBox.exe
+2、Unty从Main场景开始

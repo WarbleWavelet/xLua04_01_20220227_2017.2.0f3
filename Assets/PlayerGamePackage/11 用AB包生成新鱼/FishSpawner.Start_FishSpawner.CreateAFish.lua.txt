@@ -35,6 +35,8 @@ xlua.private_accessible(CS.FishSpawner)
 xlua.hotfix(CS.FishSpawner,'Start',function(self)
     self:Init()
     UnityEngine.Debug.Log("进入")
-    CS.Hotfix.ReadAssetBundle('level3fish3', 'gameobject\\enemy.ab')--08 FishSpawner会用到
-    CS.Hotfix.ReadAssetBundle('SeaWave', 'gameobject\\wave.ab')
+    --CS.Gun.Instance.hotfixScript.ReadAssetBundle('level3fish3', 'gameobject\\enemy.ab')--08 FishSpawner会用到
+    --CS.Gun.Instance.hotfixScript.ReadAssetBundle('SeaWave', 'gameobject\\wave.ab')
+    CS.Gun.Instance.hotfixScript.ReadAssetBundle_FromUnityWebRequestAsync('level3fish3', 'gameobject\\enemy.ab')--08 FishSpawner会用到
+    CS.Gun.Instance.hotfixScript.ReadAssetBundle_FromUnityWebRequestAsync('SeaWave', 'gameobject\\wave.ab')
 end)

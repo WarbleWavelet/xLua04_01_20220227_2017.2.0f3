@@ -33,7 +33,6 @@ public class FishSpawner : MonoBehaviour
     private int CreateMorden;
 
 
-
     //x:-26  -   26
     //z:-16  -   16
 

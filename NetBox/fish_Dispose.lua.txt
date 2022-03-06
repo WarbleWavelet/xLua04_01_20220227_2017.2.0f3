@@ -1,0 +1,40 @@
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Boss,'Start',nil)
+xlua.hotfix(CS.InvisibleBoss,'Start',nil)
+xlua.hotfix(CS.DeffendBoss,'Start',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Fire,'Start',nil)
+xlua.hotfix(CS.Ice,'Start',nil)
+xlua.hotfix(CS.ButterFly,'Start',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Fish,'TakeDamage',nil)
+xlua.hotfix(CS.Boss,'TakeDamage',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.FishSpawner,'CreateAFish',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.FishSpawner,'Start',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Gun,'GoldChange',nil)
+xlua.hotfix(CS.Gun,'DiamandsChange',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Gun,'RotateGun',nil)
+xlua.hotfix(CS.GunImage,'RotateGun',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Gun,'Attack',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.HotfixEmpty,'Start',nil)
+xlua.hotfix(CS.HotfixEmpty,'Update',nil)
+xlua.hotfix(CS.HotfixEmpty,'OnTriggerEnter',nil)
+xlua.hotfix(CS.HotfixEmpty,'BehaviourMethod',nil)
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入LuaDispose文件')
+xlua.hotfix(CS.Treasour,'CreatePrize',nil)

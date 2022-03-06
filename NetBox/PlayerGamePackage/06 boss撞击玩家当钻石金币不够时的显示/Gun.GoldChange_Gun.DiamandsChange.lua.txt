@@ -1,0 +1,24 @@
+
+--没有打Boss的扣钱补丁时，要先去Boss中修改m_reduceGold、m_reduceDiamond的值
+--InvisibleBoss绿色老婆玫瑰花不扣砖石，鲨鱼会扣
+
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+local util=require "05 boss撞击玩家数值调整/util"
+
+
+xlua.private_accessible(CS.Gun)
+util.hotfix_ex(CS.Gun,'GoldChange',function(self,number)
+	self.GoldChange(self,number)
+	if self.gold <-number then
+		self.gold=0
+		return
+	end
+end)
+util.hotfix_ex(CS.Gun,'DiamandsChange',function(self,number)
+	self.DiamandsChange(self,number)
+	if self.diamands <-number then
+		self.diamands=0
+		return
+	end
+end)

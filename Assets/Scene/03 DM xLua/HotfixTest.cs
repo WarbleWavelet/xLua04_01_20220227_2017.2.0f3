@@ -15,7 +15,7 @@ namespace DM03
         #endif
        
 
-        public int tick = 0; //如果是private的，在lua设置xlua.private_accessible(CS.HotfixTest)后即可访问
+        public int tick = 0; //如果是private的，在lua设置xlua.private_accessible(CS.Gun.Instance.hotfixScriptTest)后即可访问
 
         // Use this for initialization
         void Start()
@@ -37,7 +37,7 @@ namespace DM03
             {
                 #if USE_LUA
                     luaenv.DoString(@"
-                        xlua.hotfix(CS.HotfixTest, 'Update', function(self)
+                        xlua.hotfix(CS.Gun.Instance.hotfixScriptTest, 'Update', function(self)
                             local camera = CS.UnityEngine.GameObject.Find('Main Camera')
                             CS.UnityEngine.Debug.Log(camera.name)
                         end)

@@ -69,11 +69,14 @@ public class Gun : MonoBehaviour
             instance = value;
         }
     }
+
+
+    public Hotfix hotfixScript;
     #endregion
 
 
     #region 生命
-  private void Awake()
+    private void Awake()
     {
         instance = this;
         gold = 1000;

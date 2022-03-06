@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="util 在类似目录&#xD;&#xA;D:\Data\Projects\Unity\xLua04_01_20220227_2017.2.0f3\Assets\XLua\Resources\xlua\util.lua.txt">
+    <Position X="2.271" Y="3.66" Height="0.833" Width="6.346" />
+  </Comment>
+  <Class Name="Boss" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAQARECBAAABAAhAAAgAAKIAAABAEBARSgCEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Boss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeffendBoss" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAACAAAAAAAAAAQAAAAAAIBAAAAEAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\DeffendBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvisibleBoss" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAACAABAQAAAAAAgAAAAAAAiAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\InvisibleBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hotfix" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAEA=</HashCode>
+      <FileName>Assets\Scene\Hotfix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
