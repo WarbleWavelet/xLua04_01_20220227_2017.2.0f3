@@ -1,0 +1,80 @@
+local UnityEngine=CS.UnityEngine
+UnityEngine.Debug.Log('进入Lua文件')
+
+--[[
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using XLua;
+
+[Hotfix]
+
+public class HotfixEmpty : MonoBehaviour 
+{
+
+	void Start () {
+		
+	}
+	
+	void Update () {
+		
+	}
+
+    void OnTriggerEnter(Collider other)
+    {
+
+    }
+
+
+	[LuaCallCSharp]
+	public void BehaviourMethod()
+	{ 
+	
+	}
+}
+
+--]]
+
+--08 增加了海浪的效果
+--11 加载了物体
+canSpawnNewFish=true
+changeMapTimer=0
+
+--[[]]
+xlua.private_accessible(CS.HotfixEmpty)
+xlua.hotfix(CS.HotfixEmpty,'Start',function(self)
+	--CS.Hotfix.ReadAssetBundle('SeaWave', 'gameobject\\wave.ab')--要先加载所以统一放11那里，08 FishSpawner会用到
+	self:Invoke("BehaviourMethod",8)
+end)
+
+--[[]]
+xlua.hotfix(CS.HotfixEmpty,'Update',function(self)
+	local speed=4
+	self.transform:Translate( -self.transform.right * 4 * UnityEngine.Time.deltaTime, UnityEngine.Space.World)
+end)
+
+--[[]]
+xlua.hotfix(CS.HotfixEmpty,'OnTriggerEnter',function(self, other)
+	if other:CompareTag("Untagged")==false and other:CompareTag("Wall")==false then
+		
+		UnityEngine.Object.Destroy(other.gameObject)
+		UnityEngine.Debug.Log("删除")
+	end
+end)
+
+--[[]]
+xlua.hotfix(CS.HotfixEmpty,'BehaviourMethod',function(self)
+	
+	CS.Gun.Instance.level=CS.Gun.Instance.level+1
+	
+	if CS.Gun.Instance.level==4 then
+		CS.Gun.Instance.level=1
+	end
+	
+	canSpawnNewFish=true
+	CS.Gun.Instance.changeAudio=true
+	UnityEngine.Object.Destroy(self.gameObject)
+	
+end)
+
+

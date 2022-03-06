@@ -32,6 +32,7 @@ public class Hotfix : MonoBehaviour
         xLuaEnv.DoString("require '09 修改鱼的捕捉条件/Fish.TakeDamage_Boss.TakeDamage'");
         xLuaEnv.DoString("require '10 炮台移动方式/Gun.RotateGun_GunImage.RotateGun'");
         xLuaEnv.DoString("require '11 用AB包生成新鱼/FishSpawner.Start_FishSpawner.CreateAFish'");
+        xLuaEnv.DoString("require '12 用空的MoneBehaviour生成海浪类/HotfixEmpty.Start_HotfixEmpty.Update_HotfixEmpty.OnTriggerEnter_HotfixEmpty.BehaviourMethod'");
 
 
     }
@@ -48,6 +49,7 @@ public class Hotfix : MonoBehaviour
         xLuaEnv.DoString("require '09 修改鱼的捕捉条件/Fish.TakeDamage_Boss.TakeDamage_Dispose'");
         xLuaEnv.DoString("require '10 炮台移动方式/Gun.RotateGun_GunImage.RotateGun_Dispose'");
         xLuaEnv.DoString("require '11 用AB包生成新鱼/FishSpawner.Start_FishSpawner.CreateAFish_Dispose'");
+        xLuaEnv.DoString("require '12 用空的MoneBehaviour生成海浪类/HotfixEmpty.Start_HotfixEmpty.Update_HotfixEmpty.OnTriggerEnter_HotfixEmpty.BehaviourMethod_Dispose'");
         xLuaEnv.Dispose();
     }
     #endregion

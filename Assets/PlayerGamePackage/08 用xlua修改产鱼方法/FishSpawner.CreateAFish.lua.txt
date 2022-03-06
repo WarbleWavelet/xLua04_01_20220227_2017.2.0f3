@@ -109,6 +109,21 @@ local util=require "05 boss撞击玩家数值调整/util"
 
 xlua.private_accessible(CS.FishSpawner)
 util.hotfix_ex(CS.FishSpawner,'CreateAFish',function(self)
+
+    --12 海浪限制
+    if canSpawnNewFish==true then
+        if changeMapTimer>=5 then
+            go=CS.Hotfix.GetGameObject("SeaWave")
+            UnityEngine.GameObject.Instantiate(go)
+            canSpawnNewFish=false
+            changeMapTimer=0
+        else
+            changeMapTimer=changeMapTimer+UnityEngine.Time.deltaTime
+        end
+    else
+        return
+    end
+
     --单种鱼的生成
     if self.ItemtimeVal >= 0.5 then
         self.posNum = UnityEngine.Mathf.Floor(UnityEngine.Random.Range(0, 4) )--位置随机数
